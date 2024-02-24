@@ -15,7 +15,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-    }
+    },
+    avatar:{
+        type: String,
+        default: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png"
+    },
 }, {timestamps: true});
 
 const User = mongoose.model('User',userSchema);
